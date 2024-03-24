@@ -1,5 +1,7 @@
 name: Build and deploy on GitHub pages
-
+permissions:
+  contents: write
+  
 on:
   workflow_dispatch:
   push:
@@ -27,9 +29,8 @@ jobs:
           CALENDAR_API_KEY: ${{ secrets.CALENDAR_API_KEY }}
         run: yarn docusaurus build
       - name: Deploy to GitHub pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
           CALENDAR_API_KEY: ${{ secrets.CALENDAR_API_KEY }}
           BRANCH: gh-pages
           FOLDER: build
