@@ -1,0 +1,62 @@
+---
+title: Organizers
+sidebar_label: Organizers
+---
+
+import { Card } from "./components.js";
+
+## Core Organization Team
+
+export let organizers = [
+  {
+    name: "Kevin Maik Jablonka",
+    link: "https://www.chemgeo.uni-jena.de/en/jablonkagroup",
+    img: "https://www.chemgeo.uni-jena.de/chegemedia/iomc/jablonka-group/portrait-kmj.webp?height=1075&width=1000",
+    organization: "HIPOLE Jena, FSU Jena",
+    talkTitle: "",
+  },
+  {
+    name: "Tessa Alexanian",
+    link: "https://tessa.fyi/",
+    img: "https://tessa.fyi/img/tessa-headshot-2023.jpg",
+    organization: "",
+    talkTitle: "",
+  },
+  {
+    name: "Michael Pieler",
+    link: "https://www.linkedin.com/in/michaelpieler/",
+    img: "https://contextflow.com/wp-content/webpc-passthru.php?src=https://contextflow.com/wp-content/uploads/2020/04/michael_headspace_normal-1-2.jpg&nocache=1",
+    organization: "OpenBioML and Stability.AI",
+        talkTitle: "",
+  },
+  {
+    name: "Berend Smit",
+    link: "https://www.epfl.ch/labs/lsmo/smit/",
+    img: "https://www.epfl.ch/labs/lsmo/wp-content/uploads/2019/07/Smit-5-200x300.jpg",
+    organization: "EPFL and UC Berkeley",
+        talkTitle: "",
+  }
+];
+
+<div className="container">
+  <div className="row">
+    {organizers
+      // .sort(function (a, b) {
+      //   return a.name.localeCompare(b.name);
+      // })
+      .map((props, idx) => (
+        <Card key={idx} {...props} />
+      ))}
+  </div>
+</div>
+
+
+
+## Support
+
+Kindly supported by [CECAM](https://www.cecam.org).
+ 
+ <img height='50' src="https://www.cecam.org/themes/cecam/assets/images/logo.png"/> 
+
+
+

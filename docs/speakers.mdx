@@ -1,0 +1,31 @@
+---
+title: Speakers
+sidebar_label: Speakers
+---
+
+import { Card } from "./components.js";
+
+export const speakers = [
+  {
+    name: "Andrew White",
+    link: "https://www.linkedin.com/in/andrewdwhite/",
+    img: "https://media.licdn.com/dms/image/D4E03AQHSOqH4VRqovA/profile-displayphoto-shrink_400_400/0/1671464149624?e=1717027200&v=beta&t=F5sRlMwu0VgApSfvlKtV8TFffDj4ItcMGS3TMgYizlA",
+    organization: "FutureHouse and University of Rochester",
+    talkTitle: ""
+  },
+];
+
+
+## Speakers
+
+<div className="container">
+  <div className="row">
+    {speakers
+      .sort(function (a, b) {
+        return a.name.localeCompare(b.name);
+      })
+      .map((props, idx) => (
+        <Card key={idx} {...props} />
+      ))}
+  </div>
+</div>
